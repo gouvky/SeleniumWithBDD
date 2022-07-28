@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 		dryRun = false,
 		monochrome = true,
 		plugin = {"pretty","html:Reports/CucumberTestReport.html"},
-		tags = "@Sanity"
+		tags = "@Excel"
 		)
 
 public class TestRunner {

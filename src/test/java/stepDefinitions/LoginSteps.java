@@ -6,10 +6,12 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import pageObjects.LoginPageObjects;
 import utilities.Constants;
 import utilities.DriverManager;
+import utilities.XLUtility;
 
 public class LoginSteps {
 	
@@ -60,6 +62,28 @@ public class LoginSteps {
 		
 		LoginPageObjects.getInstance().enterUsername(username);
 		LoginPageObjects.getInstance().enterPassword(password);	
+	}
+	
+	@Given("Fetch Credentails from Excel file")
+	public void fetch_credentails_from_excel_file_from_and_row_and_col(DataTable dataTable) {
+		
+		List<Map<String,String>> data = dataTable.asMaps();
+		
+		String sheet = data.get(0).get("SheetName");
+		int rNo = Integer.parseInt(data.get(0).get("Row"));
+		int cNo = Integer.parseInt(data.get(0).get("Col"));
+		
+		String sheet1 = data.get(1).get("SheetName");
+		int rNo1 = Integer.parseInt(data.get(1).get("Row"));
+		int cNo1 = Integer.parseInt(data.get(1).get("Col"));
+		
+		XLUtility xl = new XLUtility("./TestData/LoginCredentials.xlsx");
+		
+		String uName = xl.getcellData(sheet, rNo, cNo);
+		String pwd = xl.getcellData(sheet1, rNo1, cNo1);
+		
+		LoginPageObjects.getInstance().enterUsername(uName);
+		LoginPageObjects.getInstance().enterPassword(pwd);		    
 	}
 
 	@When("Click on login button")

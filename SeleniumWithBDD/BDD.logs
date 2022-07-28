@@ -1,18 +1,5 @@
-2022-07-28 15:25:51 INFO  DriverManager:25 - Launch the browser
-2022-07-28 15:25:53 INFO  DriverManager:28 - Maximize the browser window
-2022-07-28 15:25:53 INFO  CommonFunctions:36 - Initiate the WebElements
-2022-07-28 15:25:53 INFO  LoginSteps:21 - Launch the application URL
-2022-07-28 15:25:57 INFO  LoginSteps:28 - Enter the login credentials
-2022-07-28 15:25:57 INFO  LoginSteps:68 - Click Login button
-2022-07-28 15:26:01 INFO  LoginSteps:82 - Verified the title and it is matched
-2022-07-28 15:26:01 INFO  LoginSteps:90 - Click Menu to access the Logout link
-2022-07-28 15:26:02 INFO  LoginSteps:93 - Click on Logout link to logout from the application
-2022-07-28 15:26:03 INFO  LoginSteps:100 - Close the browser
-2022-07-28 15:26:04 INFO  CommonFunctions:36 - Initiate the WebElements
-2022-07-28 15:26:04 INFO  LoginSteps:21 - Launch the application URL
-2022-07-28 15:26:04 INFO  CommonFunctions:36 - Initiate the WebElements
-2022-07-28 15:26:04 INFO  LoginSteps:21 - Launch the application URL
-2022-07-28 15:26:04 INFO  CommonFunctions:36 - Initiate the WebElements
-2022-07-28 15:26:04 INFO  LoginSteps:21 - Launch the application URL
-2022-07-28 15:26:04 INFO  CommonFunctions:36 - Initiate the WebElements
-2022-07-28 15:26:04 INFO  LoginSteps:21 - Launch the application URL
+2022-07-28 17:40:43 INFO  DriverManager:25 - Launch the browser
+2022-07-28 17:40:44 INFO  DriverManager:28 - Maximize the browser window
+2022-07-28 17:40:45 INFO  CommonFunctions:36 - Initiate the WebElements
+2022-07-28 17:40:45 INFO  LoginSteps:23 - Launch the application URL
+2022-07-28 17:40:51 INFO  LoginSteps:92 - Click Login button
