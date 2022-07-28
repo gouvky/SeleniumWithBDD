@@ -20,7 +20,6 @@
 
 Feature: Login Feature
 
-@Sanity
   Scenario: Verify the successful Login of the application
     Given Enter the application url
     Given Enter username and password
@@ -41,6 +40,21 @@ Feature: Login Feature
     |username | password |
     |Admin    | admin123 |
     |Admin123 | admin123 |
+  
+    Scenario: Verify the successful Login of the application (Datatable without header)
+     Given Enter the application url
+     Given Enter username and password in login page
+           |Admin|
+           |admin123|
+     When Click on login button
+ 
+@Sanity     
+    Scenario: Verify the successful Login of the application (Datatable with header)
+     Given Enter the application url
+     Given Enter username and password in the login page
+           |username | password |
+           |Admin    | admin123 |
+     When Click on login button
     
     
     

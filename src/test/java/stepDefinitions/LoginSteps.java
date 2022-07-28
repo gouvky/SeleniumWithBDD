@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 
@@ -35,6 +38,28 @@ public class LoginSteps {
 		LoginPageObjects.getInstance().enterUsername(username);
 		LoginPageObjects.getInstance().enterPassword(password);
 
+	}
+
+	@Given("Enter username and password in login page")
+	public void enter_username_and_password_in_login_page(io.cucumber.datatable.DataTable dataTable) {
+		
+		List<String> credentials = dataTable.asList();
+		String username = credentials.get(0);
+		String password = credentials.get(1);
+		
+		LoginPageObjects.getInstance().enterUsername(username);
+		LoginPageObjects.getInstance().enterPassword(password);
+	}
+	
+	@Given("Enter username and password in the login page")
+	public void enter_username_and_password_in_the_login_page(io.cucumber.datatable.DataTable dataTable) {
+	    
+		List<Map<String,String>> credentials = dataTable.asMaps();
+		String username = credentials.get(0).get("username");
+		String password = credentials.get(0).get("password");
+		
+		LoginPageObjects.getInstance().enterUsername(username);
+		LoginPageObjects.getInstance().enterPassword(password);	
 	}
 
 	@When("Click on login button")
